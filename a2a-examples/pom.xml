@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.microagents</groupId>
+        <artifactId>a2a-java-parent</artifactId>
+        <version>0.1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>a2a-examples</artifactId>
+    <packaging>jar</packaging>
+
+    <name>A2A Examples</name>
+    <description>Usage examples for A2A Java SDK</description>
+
+    <dependencies>
+        <!-- A2A Core -->
+        <dependency>
+            <groupId>io.microagents</groupId>
+            <artifactId>a2a-core</artifactId>
+        </dependency>
+
+        <!-- A2A Spring Boot -->
+        <dependency>
+            <groupId>io.microagents</groupId>
+            <artifactId>a2a-spring-boot</artifactId>
+        </dependency>
+
+        <!-- Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- Test dependencies -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            
+            <!-- Google Java Format -->
+            <plugin>
+                <groupId>com.spotify.fmt</groupId>
+                <artifactId>fmt-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
